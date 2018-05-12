@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".topsongs.TopSongsActivity"
             android:label="@string/Top_Songs"  />
-        
+
     </application>
 
 </manifest>
