@@ -5,9 +5,9 @@ package com.example.stud.musicapp.api;
  */
 import java.util.List;
 
-public class trendingList {
+public class TrendingList {
 
-    public List<trendingSingle> trending ;
+    public List<TrendingSingle> trending ;
 
 
 }
