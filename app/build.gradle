@@ -19,6 +19,11 @@ android {
     buildToolsVersion '26.0.2'
 }
 
+repositories {
+    mavenCentral()
+    google()
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
@@ -30,4 +35,8 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.2'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation ( "com.github.bumptech.glide:glide:4.7.1" ) {
+        exclude group : "com.android.support"
+    }
+    implementation "com.android.support:support-fragment:26.1.0"
 }
