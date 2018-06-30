@@ -1,8 +1,22 @@
 package com.example.stud.musicapp;
 
-import android.app.Activity;
+import android.app.Application;
 
-public class MusicApplication extends Activity {
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
+public class MusicApplication extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
+        Realm. init ( this );
+
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
+                .schemaVersion( 1 )
+                .deleteRealmIfMigrationNeeded()
+                .build();
+        Realm. compactRealm (realmConfiguration);
+        Realm. setDefaultConfiguration (realmConfiguration);
+    }
 }
