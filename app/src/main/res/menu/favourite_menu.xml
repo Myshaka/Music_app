@@ -5,4 +5,4 @@
         android:id= "@+id/itemFavorite"
         android:title= "@string/favorites"
         app:showAsAction= "always" />
-</ menu >
+</menu >
